@@ -6,7 +6,7 @@ redis = Redis(host='redis_app', port=6379)
 
 @app.route('/')
 def hello():
-    count = redis.incr('hits')
+    count = acredis.incr('hits')
     return 'Hello World! I have been seen {} times.\n'.format(count)
 
 if __name__ == "__main__":
